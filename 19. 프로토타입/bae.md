@@ -32,9 +32,9 @@ circle1.getArea를 요청하면 Circle의 프로토타입에 getArea를 받아�
 - .prototype은 생성자 함수가 생성되는 시점에 생성
 - 객체리터럴의 경우 contructor가 존재하지 않음. 왜냐? constructor의 경우 생성자 함수를 가리키지만 객체리터럴은 없기때문
 
-### [[prototype]] 과 .prototype의 차이를 주의하자
+### [[Prototype]] 과 .prototype의 차이를 주의하자
 
-- [[prototype]] 이거는 해당 객체의 부모를 의미하는 것
+- [[Prototype]] 이거는 해당 객체의 부모를 의미하는 것
 - .prototype는 자신(생성자함수)의 프로토타입을 의미
 - 프로토 타입에는 constructor가 존재
 
