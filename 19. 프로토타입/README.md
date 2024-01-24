@@ -2,6 +2,7 @@
 
 <details>
   <summary><h3>프로토타입에 대해 설명해 주세요.</h3></summary>
+  <p>프로토타입 객체는 새로운 객체가 생성되기 위한 원형이 되는 객체입니다. 인스턴스의 프로토타입은 변경될 수 있으며 이를 통해 생성자 함수의 프로토타입이 변경되는 것은 아닙니다.</p>
 </details>
 
 <details>
@@ -26,6 +27,7 @@
 
 <details>
   <summary><h3>window 객체의 프로토타입은 무엇인가요?</h3></summary>
+  <p>Object 입니다. JS의 대부분은 Object로 이루어져 있으며 Object의 프로토타입은 null 입니다.</p>
 </details>
 
 
