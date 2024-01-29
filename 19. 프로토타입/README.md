@@ -10,6 +10,9 @@
 
 <details>
   <summary><h3>프로토타입 체인에 대해 설명해 주세요.</h3></summary>
+  <p>
+    자바스크립트에서는 객체의 프로퍼티나 메서드에 접근할 때, 해당 객체에 있는지 확인하고 없을 경우 <code>[[Prototype]]</code> 내부 슬롯의 참조를 따라 상위 객체의 프로토타입의 프로퍼티를 탐색하는 과정을 순차적으로 반복하며 프로퍼티를 검색하고, 이러한 과정을 프로토타입 체인이라고 합니다. 자바스크립트는 프로토타입 체인을 통해 상속과 프로퍼티 검색을 구현하고 있습니다.
+  </p>
 </details>
 
 <details>
@@ -22,17 +25,24 @@
 
 <details>
   <summary><h3>prototype 속성과 __proto__ 접근자의 차이점을 설명해 주세요.</h3></summary>
+  <ul>
+    <li><code>__proto__</code> 접근자는 모든 객체가 가지고 있으며 객체가 자신의 프로토타입에 접근하거나 프로토타입을 변경하기 위해서 사용할 수 있습니다. </li> 
+    <li>반면 <code>prototype</code> 속성은 함수 객체만이 가지고 있으며, 생성자 함수를 통해 생성할 인스턴스에 프로토타입을 할당하기 위해 사용합니다. 따라서 생성자 함수가 아닌 일반 함수에서는 아무런 의미가 없습니다.</li>
+  </ul>
 </details>
 
 <details>
   <summary><h3>__proto__ 접근자를 사용할 때 주의할 점과 해결방법을 설명해 주세요.</h3></summary>
   <ul>
-    <li><p>모든 객체가 `__proto__` 접근자를 사용할 수 있는 것은 아닙니다. 직접 상속을 통해 Object.prototype을 상속받지 않는 객체를 생성할 수도 있기 때문에 `__proto__` 접근자 프로퍼티를 사용할 수 없는 경우가 있습니다. `__proto__` 접근자 프로퍼티 대신, Object.getPrototypeOf 메서드나 Object.setPrototypeOf 메서드를 사용하여 해결할 수 있습니다.</p></li>
+    <li><p>모든 객체가 <code>__proto__</code> 접근자를 사용할 수 있는 것은 아닙니다. 직접 상속을 통해 Object.prototype을 상속받지 않는 객체를 생성할 수도 있기 때문에 <code>__proto__</code> 접근자 프로퍼티를 사용할 수 없는 경우가 있습니다. <code>__proto__</code> 접근자 프로퍼티 대신, Object.getPrototypeOf 메서드나 Object.setPrototypeOf 메서드를 사용하여 해결할 수 있습니다.</p></li>
   </ul>
 </details>
 
 <details>
   <summary><h3>사용자 정의 함수에서 프로토타입이 생성되는 시점은 언제인가요?</h3></summary>
+  <p>
+    함수의 <code>prototype</code> 프로퍼티는 함수 객체가 생성되는 시점에 바인딩됩니다. 따라서 바인딩 이전에 프로토타입이 생성되어야 합니다. 예를 들어, 자바스크립트에서 함수 선언문의 경우 런타임 이전에 먼저 실행되므로 프로토타입 또한 런타임 이전에 생성됩니다. 
+  </p>
 </details>
 
 <details>
