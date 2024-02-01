@@ -2,7 +2,15 @@
 
 <details>
   <summary><h3>브라우저 렌더링 과정에 대해 설명해주세요.</h3></summary>
-  <p></p>
+  <ol>
+    <li>먼저, 브라우저는 HTML, CSS, JS, 정적 파일 등 필요한 리소스를 요청하고 서버로부터 응답 받습니다.</li>
+    <li>DOM 구축: HTML을 파싱하여 DOM 트리를 구축합니다. DOM은 문서의 계층 구조를 나타냅니다.</li>
+    <li>CSSOM 구축: CSS을 파싱하여 CSSOM 트리를 구축합니다. CSSOM은 스타일 정보를 나타내는 트리 구조로, 각 요소에 대한 스타일 규칙이 적용됩니다.</li>
+    <li>렌더 트리 구축: DOM과 CSSOM을 결합하여 렌더 트리를 생성합니다. 렌더 트리는 실제로 화면에 표시될 요소들만을 포함합니다.</li>
+    <li>레이아웃: 렌더 트리를 기반으로 각 요소의 위치와 크기를 계산합니다. 각 요소가 화면에 어떻게 배치될지 결정됩니다.</li>
+    <li>페인트: 각 요소의 실제 픽셀을 그립니다. 화면 속 요소의 색상, 배경, 그림자 등을 적용합니다.</li>
+    <li>이후 사용자의 상호작용이나 자바스크립트의 DOM API 등에 의해 렌더링이 다시 수행될 수 있습니다.(리플로우와 리페인팅)</li>
+  </ol>
 </details>
 <details>
   <summary><h3>자바스크립트 파싱 과정을 설명해주세요.</h3></summary>
@@ -20,16 +28,16 @@
   <summary><h3>다음 상황에서는 리플로우+리페인트가 발생할까요? 아니면 리페인트만 발생할까요?</h3></summary>
   <ul>
   <details>
-    <summary>버튼의 마우스를 hover 했을 때, 버튼의 백그라운드 색상이 변경될 경우</summary>
-    <p></p>
+    <summary>버튼에 마우스를 hover 했을 때, 버튼의 백그라운드 색상이 변경될 경우</summary>
+    <li>리페인팅만 발생합니다. 색상 변경은 요소의 레이아웃 변경 없이 스타일에만 영향을 주기 때문입니다.</li>
   </details>
   <details>
-    <summary>기존 요소에 display: none 추가되는 경우</summary>
-    <p></p>
+    <summary>기존 요소에 display: none 속성이 추가되는 경우</summary>
+    <li>리플로우와 리페인팅 둘 다 발생합니다. display: none 속성은 레이아웃에서 해당 요소가 제거되기 때문에 레이아웃에 변경이 생깁니다.</li>
   </details>
   <details>
-    <summary>기존 요소에 visibility: hidden 추가되는 경우</summary>
-    <p></p>
+    <summary>기존 요소에 visibility: hidden 속성이 추가되는 경우</summary>
+    <li>리페인팅만 발생합니다. visibility: hidden 속성은 요소가 화면에서 사라지는 것 처럼 보이지만, 레이아웃에는 변경이 없습니다.</li>
   </details>
   </ul>
 </details>
