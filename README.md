@@ -6,6 +6,9 @@
 
 ## Contents
 - [프로토타입](https://github.com/front-study-2024/deep-dive-js/tree/main/19.%20프로토타입)
+- [this](https://github.com/front-study-2024/deep-dive-js/tree/main/22.%20this)
+- [7번째 데이터 타입 Symbol](https://github.com/front-study-2024/deep-dive-js/tree/main/33.%207%EB%B2%88%EC%A7%B8%20%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%83%80%EC%9E%85%20Symbol)
+- [브라우저 렌더링 과정](https://github.com/front-study-2024/deep-dive-js/tree/main/38.%20%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98%20%EB%A0%8C%EB%8D%94%EB%A7%81%20%EA%B3%BC%EC%A0%95)
 
 ## Question
 
@@ -18,3 +21,25 @@
 - 사용자 정의 함수에서 프로토타입이 생성되는 시점은 언제인가요?
 - window 객체의 프로토타입은 무엇인가요?
 - 정적 프로퍼티, 정적 메소드에 대해 설명해 주세요.
+
+### this
+- 자바스크립트의 this에 대해서 설명해주세요.
+- 일반 함수의 경우 this가 필요없는 이유를 설명해주세요.
+- 콜백 함수 내부에서 this를 사용할 경우 어떤 문제가 발생할까요? 어떻게 해결할 수 있을까요?
+- bind, apply, call의 차이는 무엇인가요?
+
+### Symbol
+- Symbol 자료형에 대해서 설명해주세요.
+- Symbol로 프로퍼티의 키값으로 설정하면 어떠한 이점이 있을까요?
+- 심볼을 실제로 사용할 수 있는 예시로 무엇이 있나요?
+- 심볼의 인자로 들어가는 값의 의미는 무엇인가요?
+
+### 브라우저 렌더링 과정
+- 브라우저 렌더링 과정에 대해 설명해주세요.
+- 자바스크립트 파싱 과정을 설명해주세요.
+- 렌더링을 어떤 방법을 사용하여 최적화시킬 수 있을까요? 구체적인 예시를 말해주세요.
+- 리페인트와 리플로우를 설명해주세요.
+- 다음 상황에서는 리플로우+리페인트가 발생할까요? 아니면 리페인트만 발생할까요?
+    - 버튼의 마우스를 hover 했을 때, 버튼의 백그라운드 색상이 변경될 경우
+    - 기존 요소에 display: none 추가되는 경우
+    - 기존 요소에 visibility: hidden 추가되는 경우
