@@ -14,5 +14,7 @@
 </details>
 <details>
   <summary><h3>bind, apply, call의 차이는 무엇인가요?</h3></summary>
-  <p></p>
+  <li>bind, apply, call은 모두 자바스크립트에서 함수에 this를 바인딩하는 메서드입니다.</li>
+  <li>apply와 call은 this 지정과 동시에 함수를 호출한다는 공통점이 있지만, 함수에 전달하는 매개변수의 전달 방식에 차이가 있습니다. call은 인자를 나열해서 함수의 매개변수로 전달하고, apply는 배열 형태로 매개변수를 묶어 전달합니다.</li>
+  <li>bind의 경우 apply, call과 달리 함수를 즉시 호출하지 않고 해당 함수의 복사본을 반환합니다. 반환된 함수의 복사본은 나중에 호출할 수 있습니다.</li>
 </details>
