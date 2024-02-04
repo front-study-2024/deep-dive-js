@@ -6,7 +6,7 @@
 </details>
 <details>
   <summary><h3>Symbol로 프로퍼티의 키값으로 설정하면 어떠한 이점이 있을까요?</h3></summary>
-  <p></p>
+  <li>고유의 값으로 키 값을 설정할 수 있어 중복될 키값을 예방할 수 있습니다.</li>
 </details>
 <details>
   <summary><h3>Symbol을 실제로 사용할 수 있는 예시로 무엇이 있나요?</h3></summary>
